@@ -1,0 +1,41 @@
+/**
+ * The file is automatically generated from the cmake template
+ * cmake/rf_options.h.in
+ */
+
+#ifndef RF_OPTIONS_H
+#define RF_OPTIONS_H
+
+#ifndef RF_OPTION_WIN32_VERSION
+#cmakedefine RF_OPTION_WIN32_VERSION
+#endif
+
+#ifndef RF_OPTION_LINUX_VERSION
+#cmakedefine RF_OPTION_LINUX_VERSION
+#endif
+
+#ifndef RF_OPTION_THREADX_MSGQUEUE_SIZE
+#cmakedefine RF_OPTION_THREADX_MSGQUEUE_SIZE @RF_OPTION_THREADX_MSGQUEUE_SIZE@
+#endif
+
+#ifndef RF_OPTION_FGETS_READ_BYTESN
+#cmakedefine RF_OPTION_FGETS_READ_BYTESN @RF_OPTION_FGETS_READ_BYTESN@
+#endif
+
+#ifndef RF_OPTION_LOCALSTACK_MEMORY_SIZE
+#cmakedefine RF_OPTION_LOCALSTACK_MEMORY_SIZE @RF_OPTION_LOCALSTACK_MEMORY_SIZE@
+#endif
+
+#ifndef RF_OPTION_LOG_LEVEL_DEFAULT
+#cmakedefine RF_OPTION_LOG_LEVEL_DEFAULT @RF_OPTION_LOG_LEVEL_DEFAULT@
+#endif
+
+#ifndef _FILE_OFFSET_BITS
+#cmakedefine _FILE_OFFSET_BITS @_FILE_OFFSET_BITS@
+#endif
+
+#ifndef _LARGEFILE64_SOURCE
+#cmakedefine _LARGEFILE64_SOURCE
+#endif
+
+#endif

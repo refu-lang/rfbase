@@ -26,13 +26,13 @@ struct RFstring;
 typedef pid_t RFthread_id;
 
 //The directory separator depending on the user's system
-#ifdef REFU_WIN32_VERSION
+#ifdef RF_OPTION_WIN32_VERSION
 /**
  * The directory separator for the underlying operating system
  */
 #define RF_DIRSEP "\\"
 #define RF_CURDIR "."
-#elif defined(REFU_LINUX_VERSION)
+#elif defined(RF_OPTION_LINUX_VERSION)
 #define RF_DIRSEP "/"
 #define RF_CURDIR "."
 #else
@@ -40,7 +40,7 @@ typedef pid_t RFthread_id;
 #endif
 
 ///--- The File Permission bits ---
-#ifdef REFU_WIN32_VERSION  //in windows just defining them so they exist as macros
+#ifdef RF_OPTION_WIN32_VERSION  //in windows just defining them so they exist as macros
     #define RFP_IRUSR       0
     #define RFP_IREAD       0
     #define RFP_IWUSR       0
@@ -98,9 +98,9 @@ typedef pid_t RFthread_id;
 
 
 /* include the appropriate system info */
-#ifdef REFU_LINUX_VERSION
+#ifdef RF_OPTION_LINUX_VERSION
 #include <rflib/system/system_info_linux.h>
-#elif defined (REFU_WIN32_VERSION)
+#elif defined (RF_OPTION_WIN32_VERSION)
 #include <rflib/system/system_info_win32.h>
 #else
 #error TODO

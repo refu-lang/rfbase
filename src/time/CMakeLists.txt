@@ -1,0 +1,5 @@
+if (WIN32)
+  target_sources(rfbase PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/time_win32.c")
+else()
+  target_sources(rfbase PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/time_linux.c")
+endif()

@@ -5,7 +5,7 @@
 #ifndef REFU_THREADING_H
 #define REFU_THREADING_H
 
-#ifdef REFU_WIN32_VERSION
+#ifdef RF_OPTION_WIN32_VERSION
 #include <rflib/parallel/rf_threading_win32.h
 #else
 #include <rflib/parallel/rf_threading_linux.h>

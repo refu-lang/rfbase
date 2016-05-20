@@ -42,6 +42,19 @@ extern "C"
     #define rfFtell(i_FILE_)                        ftello64(i_FILE_)
 #endif
 
+#else /* __ FILE_OFFSET_BITS != 64 */
+
+//Fseek and Ftell definitions
+#ifdef _MSC_VER
+    #define rfFseek(i_FILE_,i_OFFSET_,i_WHENCE_)    fseek(i_FILE_,i_OFFSET_,i_WHENCE_)
+    #define rfFtell(i_FILE_)                        ftell(i_FILE_)
+#else
+    #define rfFseek(i_FILE_,i_OFFSET_,i_WHENCE_)    fseeko(i_FILE_,i_OFFSET_,i_WHENCE_)
+    #define rfFtell(i_FILE_)                        ftello(i_FILE_)
+#endif
+
+#endif
+
 #ifdef _MSC_VER
 
 #error TODO
@@ -62,19 +75,6 @@ end_pop:
     RFS_POP();
     return ret;
 }
-#endif
-
-#else /* __ FILE_OFFSET_BITS != 64 */
-
-//Fseek and Ftell definitions
-#ifdef _MSC_VER
-    #define rfFseek(i_FILE_,i_OFFSET_,i_WHENCE_)    fseek(i_FILE_,i_OFFSET_,i_WHENCE_)
-    #define rfFtell(i_FILE_)                        ftell(i_FILE_)
-#else
-    #define rfFseek(i_FILE_,i_OFFSET_,i_WHENCE_)    fseeko(i_FILE_,i_OFFSET_,i_WHENCE_)
-    #define rfFtell(i_FILE_)                        ftello(i_FILE_)
-#endif
-
 #endif
 
 /**

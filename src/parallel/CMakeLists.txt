@@ -1,0 +1,5 @@
+target_sources(rfbase PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/rf_threading.c")
+if (UNIX)
+  target_sources(rfbase PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/rf_threading_linux.c")
+  target_sources(rfbase PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/rf_worker_pool_linux.c")
+endif()

@@ -61,3 +61,6 @@ compile_commands.json
 build_test
 build_static
 build_shared/
+
+# cmake related
+build/

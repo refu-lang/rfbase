@@ -46,7 +46,7 @@ typedef struct stat stat_rft;
  */
 #define RF_CR   0xD
 
-#ifdef REFU_WIN32_VERSION
+#ifdef RF_OPTION_WIN32_VERSION
     #define i_PLUSB_WIN32   "b"
 #else
     #define i_PLUSB_WIN32   ""

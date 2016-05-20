@@ -162,7 +162,7 @@ i_DECLIMEX_ void rf_log(enum RFlog_level level, const char* file,
 
 #define RF_ERRNOMEM() RF_CRITICAL("We are out of memory!")
 
-#ifdef REFU_WIN32_VERSION
+#ifdef RF_OPTION_WIN32_VERSION
 /**
  * @brief Gets Windows Last System error
  *

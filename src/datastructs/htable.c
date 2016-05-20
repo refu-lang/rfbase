@@ -132,7 +132,7 @@ static void ht_add(struct htable *ht, const void *new, size_t h)
 	ht->table[i] = make_hval(ht, new, get_hash_ptr_bits(ht, h)|perfect);
 }
 
-static RFATTR_COLD bool double_table(struct htable *ht)
+static RF_ATTRIBUTE_COLD bool double_table(struct htable *ht)
 {
 	unsigned int i;
 	size_t oldnum = (size_t)1 << ht->bits;
@@ -171,7 +171,7 @@ static RFATTR_COLD bool double_table(struct htable *ht)
 	return true;
 }
 
-static RFATTR_COLD void rehash_table(struct htable *ht)
+static RF_ATTRIBUTE_COLD void rehash_table(struct htable *ht)
 {
 	size_t start, i;
 	uintptr_t e;
@@ -196,7 +196,7 @@ static RFATTR_COLD void rehash_table(struct htable *ht)
 }
 
 /* We stole some bits, now we need to put them back... */
-static RFATTR_COLD void update_common(struct htable *ht, const void *p)
+static RF_ATTRIBUTE_COLD void update_common(struct htable *ht, const void *p)
 {
 	unsigned int i;
 	uintptr_t maskdiff, bitsdiff;

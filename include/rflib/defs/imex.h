@@ -5,8 +5,8 @@
 #ifndef RF_IMEX_H
 #define RF_IMEX_H
 
-#ifdef REFU_WIN32_VERSION //windows case is the only one that needs special decl
-    #ifdef REFU_DYNAMIC_LIB //export  case
+#ifdef RF_OPTION_WIN32_VERSION // windows case is the only one that needs special decl
+    #ifdef REFU_DYNAMIC_LIB // export  case
         #define i_DECLIMEX_  __declspec(dllexport)
     #else//in import case or static library
         #if !( defined(REFU_STATIC_LIB) || defined(REFU_TEST)) //if this is not a static library

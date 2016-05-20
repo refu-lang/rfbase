@@ -2281,7 +2281,7 @@ i_DECLIMEX_ bool rf_textfile_tostr_in(const struct RFstring *name,
 {
     struct RFtextfile file;
     static const struct RFstring s_stdin = RF_STRING_STATIC_INIT("stdin");
-    if (!(rf_stringx_init_buff(strbuff_in, FILE_BUFF_INITIAL_SIZE, ""))) {
+    if (!(rf_stringx_init_buff(strbuff_in, RF_OPTION_INPUT_FILE_BUFF_INITIAL_SIZE, ""))) {
         RF_ERRNOMEM();
         return false;
     }

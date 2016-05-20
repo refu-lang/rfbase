@@ -88,8 +88,9 @@ int main(int argc, char **argv)
     srunner_add_suite(sr, string_manipulation_suite_create());
     srunner_add_suite(sr, string_traversal_suite_create());
     srunner_add_suite(sr, string_buffers_suite_create());
+#ifdef RF_WITH_PCRE2
     srunner_add_suite(sr, regex_suite_create());
-
+#endif
     srunner_add_suite(sr, utils_unicode_suite_create());
     srunner_add_suite(sr, utils_array_suite_create());
     srunner_add_suite(sr, utils_memory_pools_suite_create());

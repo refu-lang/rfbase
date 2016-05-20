@@ -1,0 +1,13 @@
+add_subdirectory(datastructs)
+add_subdirectory(io)
+add_subdirectory(math)
+add_subdirectory(numeric)
+add_subdirectory(parallel)
+add_subdirectory(persistent)
+add_subdirectory(stdlib)
+add_subdirectory(string)
+add_subdirectory(system)
+add_subdirectory(time)
+add_subdirectory(utils)
+
+target_sources(rfbase PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/refu.c")
