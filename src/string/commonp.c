@@ -3,15 +3,15 @@
  * @licence: BSD3 (Check repository root for details)
  */
 
-#include <rflib/defs/types.h>
+#include <rfbase/defs/types.h>
 #include "rf_str_common.ph"
 
-#include <rflib/string/decl.h>
-#include <rflib/string/flags.h>
+#include <rfbase/string/decl.h>
+#include <rfbase/string/flags.h>
 
-#include <rflib/utils/bits.h>
-#include <rflib/utils/sanity.h>
-#include <rflib/defs/retcodes.h>
+#include <rfbase/utils/bits.h>
+#include <rfbase/utils/sanity.h>
+#include <rfbase/defs/retcodes.h>
 
 char* strstr_nnt(const char* s1, unsigned int s1_len,
                  const char* s2, unsigned int s2_len)

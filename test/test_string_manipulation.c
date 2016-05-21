@@ -6,12 +6,12 @@
 #include "test_helpers.h"
 #include "utilities_for_testing.h"
 
-#include <rflib/refu.h>
-#include <rflib/string/manipulation.h>
-#include <rflib/string/manipulationx.h>
-#include <rflib/string/traversalx.h>
-#include <rflib/string/core.h>
-#include <rflib/string/corex.h>
+#include <rfbase/refu.h>
+#include <rfbase/string/manipulation.h>
+#include <rfbase/string/manipulationx.h>
+#include <rfbase/string/traversalx.h>
+#include <rfbase/string/core.h>
+#include <rfbase/string/corex.h>
 
 /* --- String Appending Tests --- START --- */
 START_TEST(test_string_append) {

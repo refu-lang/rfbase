@@ -3,9 +3,9 @@
  * @licence: BSD3 (Check repository root for details)
  */
 
-#include <rflib/datastructs/sbuffer.h>
-#include <rflib/datastructs/darray.h>
-#include <rflib/utils/memory.h>
+#include <rfbase/datastructs/sbuffer.h>
+#include <rfbase/datastructs/darray.h>
+#include <rfbase/utils/memory.h>
 
 struct RFsbuffer_stack {
     struct {darray(size_t);} index_stack;

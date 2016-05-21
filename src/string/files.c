@@ -2,18 +2,18 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/string/files.h>
+#include <rfbase/string/files.h>
 
-#include <rflib/string/conversion.h>
-#include <rflib/string/manipulation.h>
-#include <rflib/string/common.h>
+#include <rfbase/string/conversion.h>
+#include <rfbase/string/manipulation.h>
+#include <rfbase/string/common.h>
 #include "rf_str_files.ph"
 #include "rf_str_common.ph"
 
-#include <rflib/utils/log.h>
-#include <rflib/utils/memory.h>
-#include <rflib/io/rf_file.h>
-#include <rflib/utils/sanity.h>
+#include <rfbase/utils/log.h>
+#include <rfbase/utils/memory.h>
+#include <rfbase/io/rf_file.h>
+#include <rfbase/utils/sanity.h>
 
 #include <stdio.h>
 

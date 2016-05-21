@@ -1,7 +1,7 @@
-#include <rflib/system/dlib.h>
-#include <rflib/string/core.h>
-#include <rflib/string/conversion.h>
-#include <rflib/utils/memory.h>
+#include <rfbase/system/dlib.h>
+#include <rfbase/string/core.h>
+#include <rfbase/string/conversion.h>
+#include <rfbase/utils/memory.h>
 
 #include <dlfcn.h>
 

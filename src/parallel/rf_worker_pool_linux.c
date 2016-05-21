@@ -2,12 +2,12 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/parallel/rf_worker_pool.h>
-#include <rflib/parallel/rf_threading.h>
+#include <rfbase/parallel/rf_worker_pool.h>
+#include <rfbase/parallel/rf_threading.h>
 
-#include <rflib/utils/log.h>
-#include <rflib/utils/memory.h>
-#include <rflib/datastructs/intrusive_list.h>
+#include <rfbase/utils/log.h>
+#include <rfbase/utils/memory.h>
+#include <rfbase/datastructs/intrusive_list.h>
 
 #include <pthread.h>
 #include <errno.h>

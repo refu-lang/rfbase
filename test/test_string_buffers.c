@@ -5,9 +5,9 @@
 
 #include "test_helpers.h"
 #include "utilities_for_testing.h"
-#include <rflib/refu.h>
-#include <rflib/string/core.h>
-#include <rflib/string/common.h>
+#include <rfbase/refu.h>
+#include <rfbase/string/core.h>
+#include <rfbase/string/common.h>
 
 static bool test_rf_strings_buffer_fillfmt(const char *fmt,
                                            unsigned int *size,

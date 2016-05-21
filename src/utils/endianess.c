@@ -3,7 +3,7 @@
  * @licence: BSD3 (Check repository root for details)
  */
 
-#include <rflib/utils/endianess.h>
+#include <rfbase/utils/endianess.h>
 
 // Swaps the endianness of the variable
 void rf_swap_endianess_u16(uint16_t* v)

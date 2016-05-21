@@ -2,7 +2,7 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/utils/array.h>
+#include <rfbase/utils/array.h>
 
 i_INLINE_INS bool rf_array_init_(struct RFarray *a,
                                  size_t element_size,

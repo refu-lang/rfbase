@@ -3,20 +3,20 @@
  * @licence: BSD3 (Check repository root for details)
  */
 
-#include <rflib/string/conversion.h>
+#include <rfbase/string/conversion.h>
 
-#include <rflib/string/retrieval.h>
-#include <rflib/string/common.h>
+#include <rfbase/string/retrieval.h>
+#include <rfbase/string/common.h>
 #include "rf_str_common.ph"
 #include "rf_str_defines.ph"
 
-#include <rflib/defs/retcodes.h>
-#include <rflib/utils/log.h>
-#include <rflib/utils/rf_unicode.h>
-#include <rflib/utils/memory.h>
-#include <rflib/math/math.h>
-#include <rflib/utils/sanity.h>
-#include <rflib/persistent/buffers.h>
+#include <rfbase/defs/retcodes.h>
+#include <rfbase/utils/log.h>
+#include <rfbase/utils/rf_unicode.h>
+#include <rfbase/utils/memory.h>
+#include <rfbase/math/math.h>
+#include <rfbase/utils/sanity.h>
+#include <rfbase/persistent/buffers.h>
 
 #include <errno.h>
 #include <math.h>

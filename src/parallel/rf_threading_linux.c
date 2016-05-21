@@ -2,7 +2,7 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/parallel/rf_threading.h>
+#include <rfbase/parallel/rf_threading.h>
 
 int rf_thread_get_id()
 {

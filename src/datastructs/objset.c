@@ -1,4 +1,4 @@
-#include <rflib/datastructs/objset.h>
+#include <rfbase/datastructs/objset.h>
 
 unsigned int i_objset_size_(const struct objset_h *set)
 {

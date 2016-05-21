@@ -6,8 +6,8 @@
 #include "test_helpers.h"
 #include "utilities_for_testing.h"
 
-#include <rflib/string/core.h>
-#include <rflib/datastructs/objset.h>
+#include <rfbase/string/core.h>
+#include <rfbase/datastructs/objset.h>
 
 static const int test_int_arr[] = { 0, 1, 2, 3, 4, 5 };
 #define TEST_ARR_SIZE (sizeof(test_int_arr) / sizeof(int))

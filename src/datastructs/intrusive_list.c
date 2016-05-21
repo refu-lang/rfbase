@@ -11,7 +11,7 @@
  ** in the root directory of the library
  */
 
-#include <rflib/datastructs/intrusive_list.h>
+#include <rfbase/datastructs/intrusive_list.h>
 #include <stdio.h>
 #include <stdlib.h>
 

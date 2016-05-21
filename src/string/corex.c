@@ -2,20 +2,20 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/string/corex.h>
+#include <rfbase/string/corex.h>
 
-#include <rflib/string/traversalx.h>
-#include <rflib/string/core.h>
+#include <rfbase/string/traversalx.h>
+#include <rfbase/string/core.h>
 #include "rf_str_common.ph"
 
-#include <rflib/utils/endianess.h>
-#include <rflib/utils/rf_unicode.h>
-#include <rflib/utils/log.h>
-#include <rflib/defs/retcodes.h>
-#include <rflib/utils/constcmp.h>
-#include <rflib/utils/memory.h>
-#include <rflib/utils/sanity.h>
-#include <rflib/persistent/buffers.h>
+#include <rfbase/utils/endianess.h>
+#include <rfbase/utils/rf_unicode.h>
+#include <rfbase/utils/log.h>
+#include <rfbase/defs/retcodes.h>
+#include <rfbase/utils/constcmp.h>
+#include <rfbase/utils/memory.h>
+#include <rfbase/utils/sanity.h>
+#include <rfbase/persistent/buffers.h>
 
 #include <stdarg.h>
 #include <stdio.h>

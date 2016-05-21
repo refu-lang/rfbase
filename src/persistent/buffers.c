@@ -1,4 +1,4 @@
-#include <rflib/persistent/buffers.h>
+#include <rfbase/persistent/buffers.h>
 
 i_THREAD__ struct RFmbuffer i_ts_mbuf;
 i_THREAD__ struct RFsbuffer i_ts_sbuf;

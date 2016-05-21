@@ -2,7 +2,7 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/system/system_info_linux.h>
+#include <rfbase/system/system_info_linux.h>
 
 //system info global definition
 struct RFsystem_info g_sys_info;

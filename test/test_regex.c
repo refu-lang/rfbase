@@ -6,8 +6,8 @@
 #include "test_helpers.h"
 #include "utilities_for_testing.h"
 
-#include <rflib/string/core.h>
-#include <rflib/string/regex.h>
+#include <rfbase/string/core.h>
+#include <rfbase/string/regex.h>
 
 START_TEST(test_re_match_single1) {
     struct RFstring pattern = RF_STRING_STATIC_INIT("[a-z]+");

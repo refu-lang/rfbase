@@ -2,19 +2,19 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/string/retrieval.h>
+#include <rfbase/string/retrieval.h>
 
-#include <rflib/string/core.h>
-#include <rflib/string/corex.h>
-#include <rflib/string/conversion.h>
+#include <rfbase/string/core.h>
+#include <rfbase/string/corex.h>
+#include <rfbase/string/conversion.h>
 #include "rf_str_common.ph"
 
-#include <rflib/defs/retcodes.h>
-#include <rflib/utils/rf_unicode.h>
-#include <rflib/utils/bits.h> 
-#include <rflib/utils/memory.h>
-#include <rflib/utils/sanity.h>
-#include <rflib/utils/array.h>
+#include <rfbase/defs/retcodes.h>
+#include <rfbase/utils/rf_unicode.h>
+#include <rfbase/utils/bits.h> 
+#include <rfbase/utils/memory.h>
+#include <rfbase/utils/sanity.h>
+#include <rfbase/utils/array.h>
 
 #include <stdarg.h>
 #include <limits.h>

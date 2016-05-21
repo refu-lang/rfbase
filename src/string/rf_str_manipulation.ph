@@ -3,12 +3,12 @@
 #ifndef RF_STRING_MANIPULATION_PH
 #define RF_STRING_MANIPULATION_PH
 
-#include <rflib/string/corex.h>
-#include <rflib/string/flags.h>
+#include <rfbase/string/corex.h>
+#include <rfbase/string/flags.h>
 #include "rf_str_common.ph"
 
-#include <rflib/defs/inline.h>
-#include <rflib/utils/sanity.h>
+#include <rfbase/defs/inline.h>
+#include <rfbase/utils/sanity.h>
 
 #include <limits.h>
 

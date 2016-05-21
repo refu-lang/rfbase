@@ -3,7 +3,7 @@
  * https://github.com/rustyrussell/ccan
  */
 /* Licensed under LGPLv2+ - see ccan-LICENSE file for details */
-#include <rflib/datastructs/htable.h>
+#include <rfbase/datastructs/htable.h>
 #include <stdlib.h>
 #include <limits.h>
 #include <stdbool.h>

@@ -6,16 +6,16 @@
 #include "test_helpers.h"
 #include "utilities_for_testing.h"
 
-#include <rflib/refu.h>
-#include <rflib/utils/log.h>
-#include <rflib/utils/fixed_memory_pool.h>
-#include <rflib/system/system.h>
+#include <rfbase/refu.h>
+#include <rfbase/utils/log.h>
+#include <rfbase/utils/fixed_memory_pool.h>
+#include <rfbase/system/system.h>
 
-#include <rflib/string/common.h>
-#include <rflib/string/core.h>
-#include <rflib/string/corex.h>
-#include <rflib/string/retrieval.h>
-#include <rflib/io/rf_textfile.h>
+#include <rfbase/string/common.h>
+#include <rfbase/string/core.h>
+#include <rfbase/string/corex.h>
+#include <rfbase/string/retrieval.h>
+#include <rfbase/io/rf_textfile.h>
 
 struct foo {
     int x;

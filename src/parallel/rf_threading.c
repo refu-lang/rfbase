@@ -2,11 +2,11 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/parallel/rf_threading.h>
+#include <rfbase/parallel/rf_threading.h>
 
-#include <rflib/utils/log.h>
-#include <rflib/persistent/buffers.h>
-#include <rflib/refu.h>
+#include <rfbase/utils/log.h>
+#include <rfbase/persistent/buffers.h>
+#include <rfbase/refu.h>
 
 bool rf_init_thread_specific()
 {

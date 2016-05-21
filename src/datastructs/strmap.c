@@ -1,9 +1,9 @@
-#include <rflib/datastructs/strmap.h>
+#include <rfbase/datastructs/strmap.h>
 
-#include <rflib/utils/log.h>
-#include <rflib/string/retrieval.h>
-#include <rflib/string/core.h>
-#include <rflib/math/ilog.h>
+#include <rfbase/utils/log.h>
+#include <rfbase/string/retrieval.h>
+#include <rfbase/string/core.h>
+#include <rfbase/math/ilog.h>
 
 #include <assert.h>
 #include <stdlib.h>

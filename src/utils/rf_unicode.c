@@ -2,12 +2,12 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/utils/rf_unicode.h>
+#include <rfbase/utils/rf_unicode.h>
 
-#include <rflib/utils/log.h>
-#include <rflib/utils/memory.h>
-#include <rflib/utils/endianess.h>
-#include <rflib/utils/sanity.h>
+#include <rfbase/utils/log.h>
+#include <rfbase/utils/memory.h>
+#include <rfbase/utils/endianess.h>
+#include <rfbase/utils/sanity.h>
 
 #include <string.h>
 #include <limits.h>

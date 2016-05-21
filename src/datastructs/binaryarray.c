@@ -2,10 +2,10 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/datastructs/binaryarray.h>
+#include <rfbase/datastructs/binaryarray.h>
 
-#include <rflib/utils/log.h>
-#include <rflib/utils/memory.h>
+#include <rfbase/utils/log.h>
+#include <rfbase/utils/memory.h>
 
 #include <string.h>
 

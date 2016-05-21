@@ -6,7 +6,7 @@
 #include "test_helpers.h"
 #include "utilities_for_testing.h"
 
-#include <rflib/datastructs/mbuffer.h>
+#include <rfbase/datastructs/mbuffer.h>
 
 struct foo {
     uint64_t x;

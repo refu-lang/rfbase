@@ -1,6 +1,6 @@
-#include <rflib/datastructs/mbuffer.h>
-#include <rflib/datastructs/darray.h>
-#include <rflib/utils/memory.h>
+#include <rfbase/datastructs/mbuffer.h>
+#include <rfbase/datastructs/darray.h>
+#include <rfbase/utils/memory.h>
 
 /* -- RFmbuffer_stack functions -- */
 struct RFmbuffer_stack {

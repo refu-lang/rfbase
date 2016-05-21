@@ -2,9 +2,9 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/defs/inline.h>
-#include <rflib/defs/types.h>
-#include <rflib/defs/retcodes.h>
+#include <rfbase/defs/inline.h>
+#include <rfbase/defs/types.h>
+#include <rfbase/defs/retcodes.h>
 #include "rf_int.ph"
 
 

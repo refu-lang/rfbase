@@ -2,17 +2,17 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/string/traversalx.h>
+#include <rfbase/string/traversalx.h>
 
-#include <rflib/string/retrieval.h>
-#include <rflib/string/core.h>
-#include <rflib/string/corex.h>
+#include <rfbase/string/retrieval.h>
+#include <rfbase/string/core.h>
+#include <rfbase/string/corex.h>
 #include "rf_str_common.ph"
 
-#include <rflib/defs/retcodes.h>
-#include <rflib/utils/rf_unicode.h>
-#include <rflib/utils/memory.h>
-#include <rflib/utils/sanity.h>
+#include <rfbase/defs/retcodes.h>
+#include <rfbase/utils/rf_unicode.h>
+#include <rfbase/utils/memory.h>
+#include <rfbase/utils/sanity.h>
 
 #include <stdarg.h>
 #include <limits.h>

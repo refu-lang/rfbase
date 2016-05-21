@@ -3,17 +3,17 @@
  * @licence: BSD3 (Check repository root for details)
  */
 
-#include <rflib/string/core.h>
+#include <rfbase/string/core.h>
 
 #include "rf_str_common.ph"
 #include "rf_str_defines.ph"
 
-#include <rflib/utils/rf_unicode.h>
-#include <rflib/defs/retcodes.h>
-#include <rflib/utils/log.h>
-#include <rflib/utils/memory.h>
-#include <rflib/utils/sanity.h>
-#include <rflib/persistent/buffers.h>
+#include <rfbase/utils/rf_unicode.h>
+#include <rfbase/defs/retcodes.h>
+#include <rfbase/utils/log.h>
+#include <rfbase/utils/memory.h>
+#include <rfbase/utils/sanity.h>
+#include <rfbase/persistent/buffers.h>
 
 #include <stdio.h>
 

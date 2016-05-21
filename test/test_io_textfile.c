@@ -7,16 +7,16 @@
 #include "test_io_helpers.h"
 #include "utilities_for_testing.h"
 
-#include <rflib/refu.h>
-#include <rflib/string/files.h>
-#include <rflib/string/filesx.h>
-#include <rflib/string/core.h>
-#include <rflib/string/corex.h>
-#include <rflib/string/manipulation.h>
-#include <rflib/string/traversalx.h>
-#include <rflib/system/system.h>
-#include <rflib/io/rf_textfile.h>
-#include <rflib/utils/array.h>
+#include <rfbase/refu.h>
+#include <rfbase/string/files.h>
+#include <rfbase/string/filesx.h>
+#include <rfbase/string/core.h>
+#include <rfbase/string/corex.h>
+#include <rfbase/string/manipulation.h>
+#include <rfbase/string/traversalx.h>
+#include <rfbase/system/system.h>
+#include <rfbase/io/rf_textfile.h>
+#include <rfbase/utils/array.h>
 
 #define PARTIAL_SECOND_LINE_UTF8                    \
     "２日の東京外国為替市場では、主要通貨に対して"

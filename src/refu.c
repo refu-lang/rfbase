@@ -2,11 +2,11 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/refu.h>
+#include <rfbase/refu.h>
 
-#include <rflib/utils/log.h>
-#include <rflib/system/system.h>
-#include <rflib/persistent/buffers.h>
+#include <rfbase/utils/log.h>
+#include <rfbase/system/system.h>
+#include <rfbase/persistent/buffers.h>
 
 #include "string/rf_str_mod.ph"
 

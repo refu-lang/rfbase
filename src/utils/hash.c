@@ -67,7 +67,7 @@ on 1 byte), but shoehorning those bytes into integers efficiently is messy.
 #endif
 #endif /* old hash.c headers. */
 
-#include <rflib/utils/hash.h>
+#include <rfbase/utils/hash.h>
 
 #if RF_HAVE_LITTLE_ENDIAN
 #define HASH_LITTLE_ENDIAN 1

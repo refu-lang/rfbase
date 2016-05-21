@@ -2,11 +2,11 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/string/common.h>
+#include <rfbase/string/common.h>
 
-#include <rflib/utils/sanity.h>
-#include <rflib/utils/log.h>
-#include <rflib/utils/rf_unicode.h>
+#include <rfbase/utils/sanity.h>
+#include <rfbase/utils/log.h>
+#include <rfbase/utils/rf_unicode.h>
 
 #include <stdio.h>
 #include <stdarg.h>

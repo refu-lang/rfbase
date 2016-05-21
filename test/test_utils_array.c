@@ -6,8 +6,8 @@
 #include "test_helpers.h"
 #include "utilities_for_testing.h"
 
-#include <rflib/refu.h>
-#include <rflib/utils/array.h>
+#include <rfbase/refu.h>
+#include <rfbase/utils/array.h>
 
 static const uint32_t arr2[] = { 15, 25, 35, 45, 32, 65, 74, 12, 32, 45 };
 

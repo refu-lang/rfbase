@@ -2,26 +2,26 @@
  * @author: Lefteris Karapetsas
  * @licence: BSD3 (Check repository root for details)
  */
-#include <rflib/io/rf_textfile.h>
-#include <rflib/io/rf_file.h>
+#include <rfbase/io/rf_textfile.h>
+#include <rfbase/io/rf_file.h>
 #include "rf_textfile.ph"
 
-#include <rflib/string/core.h>
-#include <rflib/string/corex.h>
-#include <rflib/string/retrieval.h>
-#include <rflib/string/manipulation.h>
-#include <rflib/string/filesx.h>
-#include <rflib/string/files.h>
-#include <rflib/string/traversalx.h>
-#include <rflib/string/manipulationx.h>
-#include <rflib//utils/rf_unicode.h>
+#include <rfbase/string/core.h>
+#include <rfbase/string/corex.h>
+#include <rfbase/string/retrieval.h>
+#include <rfbase/string/manipulation.h>
+#include <rfbase/string/filesx.h>
+#include <rfbase/string/files.h>
+#include <rfbase/string/traversalx.h>
+#include <rfbase/string/manipulationx.h>
+#include <rfbase//utils/rf_unicode.h>
 
-#include <rflib//utils/endianess.h>
-#include <rflib//utils/log.h>
-#include <rflib//utils/memory.h>
-#include <rflib/system/system.h>
-#include <rflib//utils/constcmp.h>
-#include <rflib//utils/sanity.h>
+#include <rfbase//utils/endianess.h>
+#include <rfbase//utils/log.h>
+#include <rfbase//utils/memory.h>
+#include <rfbase/system/system.h>
+#include <rfbase//utils/constcmp.h>
+#include <rfbase//utils/sanity.h>
 
 #include <errno.h>
 
