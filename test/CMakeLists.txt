@@ -52,5 +52,3 @@ file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/utf8stringfile"
   DESTINATION "${CMAKE_BINARY_DIR}/test")
 
 target_link_libraries(test_rfbase PUBLIC rfbase)
-
-

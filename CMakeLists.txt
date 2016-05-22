@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.1.0)
 # project name and version should be set after cmake_policy CMP0048
 project(rfbase VERSION "0.5")
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/")
 include(RFTryCompile)
 include(RFTryRun)
 include(RFOption)
@@ -97,14 +97,15 @@ LOG_DEBUG"
 
 include(RFProjectConfig)
 rf_project_config(rfbase)
-configure_file(${CMAKE_MODULE_PATH}/rf_options.h.in ../include/rf_options.h)
-# try to find Perl Compatibe Regex v2, if found then rfbase's regex is also compiled
+configure_file(${CMAKE_MODULE_PATH}/rf_options.h.in ${CMAKE_CURRENT_SOURCE_DIR}/include/rf_options.h)
+
+# try to find Perl Compatibe Regex v2, if found then rfbase's regex is also compiled & linked
 find_package(PCRE2)
+if (${PCRE2_FOUND})
+  target_link_libraries(rfbase PUBLIC ${PCRE2_LIBRARIES})
+endif()
 
 
-target_include_directories(rfbase PUBLIC include)
+target_include_directories(rfbase PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 add_subdirectory(src)
 add_subdirectory(test)
-
-
-
