@@ -38,8 +38,11 @@ endif()
 
 # --- general stuff needed for tests
 target_compile_definitions(test_rfbase PUBLIC RF_UNIT_TESTS)
+include(FindPkgConfig)
 find_package(Check REQUIRED)
+pkg_check_modules(LIBCHECK REQUIRED check) # <-- this sets a bunch of variables
 target_link_libraries(test_rfbase PUBLIC check)
+target_link_libraries(test_rfbase PUBLIC ${LIBCHECK_LDFLAGS})
 # --- stuff needed for rfclib tests
 target_include_directories(test_rfbase PUBLIC .)
 # moves needed test files to the test directory

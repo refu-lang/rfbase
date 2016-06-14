@@ -20,6 +20,10 @@ natural file size limit is greater than 2GB (i.e., on 64 bit systems) the new fu
 identical to the replaced functions"
       TRUE)
     target_compile_definitions(${TARGET} PUBLIC "_GNU_SOURCE")
+
+    target_link_libraries(${TARGET} PUBLIC rt)
+    target_link_libraries(${TARGET} PUBLIC pthread)
+    target_link_libraries(${TARGET} PUBLIC m)
   endif()
   # --- General options
   # TODO: This should need a check
