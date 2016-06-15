@@ -212,6 +212,20 @@ i_DECLIMEX_ bool rf_system_rename_file(void *name, void *newName);
 i_DECLIMEX_ bool rf_system_file_exists(const struct RFstring *name);
 
 /**
+ * @brief Check that a file exists in the system PATH
+ *
+ * @lmsFunction
+ * @param name A string with the name of the file to check
+ * @param out  An optional output parameter which will contain the full path
+ *             to the file if it is found inside the system's PATH.
+ * @inhtype{String,StringX} @tmpSTR
+ * @return Returns @c true if the file exists in the path and @c false otherwise
+ */
+i_DECLIMEX_ bool rf_system_file_in_path(
+    const struct RFstring *name,
+    struct RFstring *out);
+
+/**
  * @brief Returns a unique address for the calling thread
  *
  * For Linux it uses the gettid system call

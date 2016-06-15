@@ -6,6 +6,7 @@
 
 #include <rfbase/string/xdecl.h>
 #include <rfbase/string/common.h>
+#include <rfbase/string/core.h>
 #include <rfbase/string/corex.h>
 #include <rfbase/string/retrieval.h>
 #include <rfbase/utils/log.h>
@@ -230,6 +231,65 @@ bool rf_system_file_exists(const struct RFstring *name)
 {
     stat_rft sb;
     return (rfStat(name, &sb) == 0);
+}
+
+bool rf_system_file_in_path(const struct RFstring *name, struct RFstring *out)
+{
+    // The code is inspired by NETBSD's execve()
+    // http://cvsweb.netbsd.org/bsdweb.cgi/src/lib/libc/gen/execvp.c?rev=1.30&content-type=text/x-cvsweb-markup&only_with_tag=MAIN
+    struct RFstring curr_dir;
+    const char *path;
+    const char *bp;
+    const char *p;
+    size_t lp;
+    bool rc = false;
+	if (!(path = getenv("PATH"))) {
+        RF_ERROR("Could not get $PATH environmnent variable");
+        return false;
+    }
+
+	do {
+		/* Find the end of this path element. */
+		for (p = path; *path != 0 && *path != ':'; path++)
+			continue;
+		/*
+		 * It's a SHELL path -- double, leading and trailing colons
+		 * mean the current directory.
+		 */
+		if (p == path) {
+			p = ".";
+			lp = 1;
+		} else {
+			lp = path - p;
+        }
+
+		/*
+		 * If the path is too long complain.  This is a possible
+		 * security issue; given a way to make the path too long
+		 * the user may execute the wrong program.
+		 */
+		if (lp + rf_string_length_bytes(name) + 2 > PATH_MAX) {
+            RF_ERROR("Path too long");
+			continue;
+		}
+        RF_STRING_SHALLOW_INIT(&curr_dir, (char*)p, lp);
+        RFS_PUSH();
+        struct RFstring *full_path = RFS(RFS_PF"/"RFS_PF, RFS_PA(&curr_dir), RFS_PA(name));
+        if (rf_system_file_exists(full_path)) {
+            rc = true;
+            if (out) {
+                if (!rf_string_copy_in(out, full_path)) {
+                    rc = false;
+                }
+            }
+            RFS_POP();
+            goto done;
+        }
+        RFS_POP();
+    } while (*path++ == ':');	/* Otherwise, *path was NUL */
+
+done:
+    return rc;
 }
 
 RFthread_id rf_system_get_thread_id()
