@@ -33,6 +33,7 @@ identical to the replaced functions"
 _FILE_OFFSET_BITS allows the 64 bit interface to replace the old interface."
     64)
 
+  rf_system_bool_option(${TARGET} COVERAGE "Enable coverage report analysis" FALSE)
   # --- Check what features the compiler supports
   rf_try_compile(${TARGET} TYPEOF "#include <stddef.h>\nint main(){typeof(int) a = 0\; return a\;}")
   rf_try_compile(${TARGET} ATTRIBUTE_COLD "int __attribute__((cold)) func(int x) { return x\; } int main() {return 0\;}" "__attribute__((cold))")

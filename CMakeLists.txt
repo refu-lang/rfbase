@@ -104,6 +104,9 @@ find_package(PCRE2)
 if (${PCRE2_FOUND})
   target_link_libraries(rfbase PUBLIC ${PCRE2_LIBRARIES})
 endif()
+# handle code coverage if requested
+include(RFCoverage)
+rf_setup_coverage(rfbase)
 
 
 target_include_directories(rfbase PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
