@@ -72,9 +72,13 @@
 
 
 
-/* for doubles */
-#define ck_assert_double_eq(val1_, val2_)             \
-    ck_assert_msg(DBLCMP_EQ(val1_, val2_),            \
-                  "double %lf != %lf", val1_, val2_)
+/* Comparison for doubles. check library contains a macro from v0.11.0 */
+#if CHECK_MAJOR_VERSION == 0 && CHECK_MINOR_VERSION < 11
+#define ck_assert_double_eq(val1_, val2_)       \
+    ck_assert_msg(                              \
+        DBLCMP_EQ(val1_, val2_),                \
+        "double %lf != %lf", val1_, val2_       \
+    )
+#endif
 
 #endif
