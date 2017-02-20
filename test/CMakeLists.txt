@@ -45,7 +45,12 @@ target_link_libraries(test_rfbase PUBLIC check)
 target_link_libraries(test_rfbase PUBLIC ${LIBCHECK_LDFLAGS})
 
 # --- stuff needed for rfclib tests
+
 target_include_directories(test_rfbase PUBLIC .)
+
+# silence the clang warning for invalid unicode in the string literals
+# for the invalid unicode string literal tests
+SET_SOURCE_FILES_PROPERTIES("${CMAKE_CURRENT_SOURCE_DIR}/test_utils_unicode.c" PROPERTIES COMPILE_FLAGS -Wno-invalid-source-encoding)
 # moves needed test files to the test directory
 target_compile_definitions(test_rfbase PUBLIC "CLIB_TESTS_PATH=\"${CMAKE_BINARY_DIR}/test/\"")
 file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/utf8stringfile"

@@ -18,7 +18,9 @@
 #include <dirent.h>
 #include <unistd.h>
 #include <sys/syscall.h>
+#include <sys/syslimits.h>
 #include <pwd.h>
+#include <pthread.h>
 
 //Creates a directory
 bool rf_system_make_dir(const struct RFstring *dirname, int mode)
@@ -294,7 +296,15 @@ done:
 
 RFthread_id rf_system_get_thread_id()
 {
-    return syscall(SYS_gettid);
+    RFthread_id tid;
+#if defined(__APPLE__)
+    uint64_t tid64;
+    pthread_threadid_np(NULL, &tid64);
+    tid = (RFthread_id) tid64;
+#else
+    tid = syscall(SYS_gettid);
+#endif
+    return tid;
 }
 
 FILE *rf_fopen(const struct RFstring *n, const char *mode)
@@ -355,6 +365,10 @@ bool rf_system_activate()
     g_sys_info.endianess = (*(char *)&anint == (char)0xef)?
     RF_LITTLE_ENDIAN : RF_BIG_ENDIAN;
 
+#if defined(__LINUX__) // in MacosX case totally ignore those
+    // TODO: We are not really using those anywhere yet.
+    // If we do, remember to adjust for MacosX too.
+
     // see if we can have high res timer
     g_sys_info.has_high_res_timer = true;
     if (clock_getres(CLOCK_PROCESS_CPUTIME_ID, 0) == -1) {
@@ -372,6 +386,7 @@ bool rf_system_activate()
     } else {
         g_sys_info.timerType = CLOCK_PROCESS_CPUTIME_ID;
     }
+#endif
     return true;
 }
 

@@ -32,9 +32,12 @@ typedef pid_t RFthread_id;
  */
 #define RF_DIRSEP "\\"
 #define RF_CURDIR "."
-#elif defined(RF_OPTION_LINUX_VERSION)
+
+#elif defined(RF_OPTION_LINUX_VERSION) || defined(RF_OPTION_APPLE_VERSION)
+
 #define RF_DIRSEP "/"
 #define RF_CURDIR "."
+
 #else
 	#error Unsupported OS detected
 #endif
@@ -98,7 +101,7 @@ typedef pid_t RFthread_id;
 
 
 /* include the appropriate system info */
-#ifdef RF_OPTION_LINUX_VERSION
+#if  defined(RF_OPTION_LINUX_VERSION) || defined(RF_OPTION_APPLE_VERSION)
 #include <rfbase/system/system_info_linux.h>
 #elif defined (RF_OPTION_WIN32_VERSION)
 #include <rfbase/system/system_info_win32.h>
