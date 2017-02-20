@@ -18,7 +18,9 @@
 #include <dirent.h>
 #include <unistd.h>
 #include <sys/syscall.h>
+#if defined(__APPLE__)
 #include <sys/syslimits.h>
+#endif
 #include <pwd.h>
 #include <pthread.h>
 
