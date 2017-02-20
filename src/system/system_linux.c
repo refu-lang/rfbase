@@ -365,6 +365,10 @@ bool rf_system_activate()
     g_sys_info.endianess = (*(char *)&anint == (char)0xef)?
     RF_LITTLE_ENDIAN : RF_BIG_ENDIAN;
 
+#if defined(__LINUX__) // in MacosX case totally ignore those
+    // TODO: We are not really using those anywhere yet.
+    // If we do, remember to adjust for MacosX too.
+
     // see if we can have high res timer
     g_sys_info.has_high_res_timer = true;
     if (clock_getres(CLOCK_PROCESS_CPUTIME_ID, 0) == -1) {
@@ -382,6 +386,7 @@ bool rf_system_activate()
     } else {
         g_sys_info.timerType = CLOCK_PROCESS_CPUTIME_ID;
     }
+#endif
     return true;
 }
 
