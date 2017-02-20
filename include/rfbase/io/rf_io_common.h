@@ -14,6 +14,8 @@
 
 #ifdef _MSC_VER
 typedef __int64 RFfile_offset;
+#elif __APPLE__
+typedef off_t RFfile_offset; // in Apple off_t is 64bit by default
 #else
 typedef off64_t RFfile_offset;
 #endif
@@ -26,7 +28,6 @@ typedef struct stat64 stat_rft;
 #ifdef _MSC_VER
 typedef __int32 RFfile_offset;
 #else
-
 typedef off_t RFfile_offset;
 #endif
 

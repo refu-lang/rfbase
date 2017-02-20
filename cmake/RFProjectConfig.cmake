@@ -10,7 +10,11 @@ function(rf_project_config TARGET)
   if (WIN32)
     rf_bool_option(${TARGET} WIN32_VERSION "Win32 Version" TRUE)
     target_compile_definitions(${TARGET} PUBLIC "_WIN32_WINNT=0x501")
-  else()
+  elseif (APPLE)
+    rf_bool_option(${TARGET} APPLE_VERSION "Apple Version" TRUE)
+    target_link_libraries(${TARGET} PUBLIC pthread)
+    target_link_libraries(${TARGET} PUBLIC m)
+  elseif (UNIX)
     rf_bool_option(${TARGET} LINUX_VERSION "Linux Version" TRUE)
     rf_system_bool_option(${TARGET} _LARGEFILE64_SOURCE
       "If you define this macro an additional set of functions is made available which \
@@ -24,7 +28,11 @@ identical to the replaced functions"
     target_link_libraries(${TARGET} PUBLIC rt)
     target_link_libraries(${TARGET} PUBLIC pthread)
     target_link_libraries(${TARGET} PUBLIC m)
+  else()
+    message(FATAL_ERROR "Unsupported Operating System")
   endif()
+
+
   # --- General options
   # TODO: This should need a check
   rf_system_numerical_option(${TARGET} _FILE_OFFSET_BITS

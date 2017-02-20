@@ -37,6 +37,9 @@ extern "C"
 #ifdef _MSC_VER
     #define rfFseek(i_FILE_,i_OFFSET_,i_WHENCE_)    _fseeki64(i_FILE_,i_OFFSET_,i_WHENCE_)
     #define rfFtell(i_FILE_)                        _ftelli64(i_FILE_)
+#elif __APPLE__ // by default it's 64 bit in Macosx
+    #define rfFseek(i_FILE_,i_OFFSET_,i_WHENCE_)    fseek(i_FILE_,i_OFFSET_,i_WHENCE_)
+    #define rfFtell(i_FILE_)                        ftell(i_FILE_)
 #else
     #define rfFseek(i_FILE_,i_OFFSET_,i_WHENCE_)    fseeko64(i_FILE_,i_OFFSET_,i_WHENCE_)
     #define rfFtell(i_FILE_)                        ftello64(i_FILE_)
