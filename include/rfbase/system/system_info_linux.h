@@ -51,8 +51,10 @@ struct RFsystem_info {
      * resolution performance counter in windows and clock_gettime in Linux
      */
     bool has_high_res_timer;
+#if defined(__LINUX__)
     //! In Linux we will keep the type of high res counter used by the timers
     clockid_t timerType;
+#endif
 };
 extern struct RFsystem_info g_sys_info;
 

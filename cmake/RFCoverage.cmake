@@ -23,9 +23,9 @@ function(rf_setup_coverage TARGET)
 
   if (NOT CMAKE_COMPILER_IS_GNUCXX)
 	# Clang version 3.0.0 and greater now supports gcov as well.
-	message(WARNING "Compiler is not GNU gcc! Clang Version 3.0.0 and greater supports gcov as well, but older versions don't.") #
+	message(WARNING "Compiler is not GNU gcc! Clang Version 3.0.0 and greater supports gcov as well, but older versions don't.")
 
-	if (NOT "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+	if (NOT "${CMAKE_CXX_COMPILER_ID}" Matches ".*Clang.*")
 	  message(FATAL_ERROR "Compiler is not GNU gcc or clang! Aborting...")
 	endif()
   endif()
